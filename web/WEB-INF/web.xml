@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ViewProductsServlet</servlet-name>
+        <servlet-class>com.phatsmalone.controller.ViewProductsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SingleViewServlet</servlet-name>
+        <servlet-class>com.phatsmalone.controller.SingleViewServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CartServletController</servlet-name>
+        <servlet-class>com.phatsmalone.controller.CartServletController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewProductsServlet</servlet-name>
+        <url-pattern>/ViewProductsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SingleViewServlet</servlet-name>
+        <url-pattern>/singleView/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CartServletController</servlet-name>
+        <url-pattern>/Cart/*</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    <context-param>
+        <param-name>pValue</param-name>
+        <param-value>7</param-value>
+    </context-param>
+    <welcome-file-list>
+        <welcome-file>ViewProductsServlet</welcome-file>
+    </welcome-file-list>
+</web-app>
